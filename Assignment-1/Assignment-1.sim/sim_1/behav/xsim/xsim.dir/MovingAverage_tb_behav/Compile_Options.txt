@@ -1,1 +1,0 @@
--wto "64483eebbe474da5b2e957c1bec51d66" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "MovingAverage_tb_behav" "xil_defaultlib.MovingAverage_tb" -log "elaborate.log" 
