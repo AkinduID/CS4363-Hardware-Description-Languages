@@ -14,45 +14,52 @@ module ALU_tb();
     // Apply input stimuli
     A = 8'b11110000;
     M = 8'b00001111;
-    #10 ALU_OP = 3'b001;
+    ALU_OP = 3'b001;
+    #10;
     // check the output for A+M operation
     if(X == 8'b11111111)
       $display("Test Passed for A+M");
     else
       $display("Test Failed for A+M");
-    #10 ALU_OP = 3'b010;
+    ALU_OP = 3'b010;
+    #10;
     // check the output for A-M operation
-    if(X == 8'b11111111)
+    if(X == 8'b11100001)
       $display("Test Passed for A-M");
     else
       $display("Test Failed for A-M");
-    #10 ALU_OP = 3'b011;
+    ALU_OP = 3'b011;
+    #10;
     // check the output for M-A operation
-    if(X == 8'b00000000)
+    if(X == 8'b00011111)
       $display("Test Passed for M-A");
     else
       $display("Test Failed for M-A");
-    #10 ALU_OP = 3'b100;
+    ALU_OP = 3'b100;
+    #10;
     // check the output for -(A+M) operation
     if(X == 8'b00000000)
       $display("Test Passed for -(A+M)");
     else
       $display("Test Failed for -(A+M)");
-    #10 ALU_OP = 3'b101;
+    ALU_OP = 3'b101;
+    #10;
     // check the output for A and M operation
-    if(X == 8'b00001111)
+    if(X == 8'b00000000)
       $display("Test Passed for A and M");
     else
       $display("Test Failed for A and M");
-    #10 ALU_OP = 3'b110;
+    ALU_OP = 3'b110;
+    #10;
     // check the output for A or M operation
     if(X == 8'b11111111)
       $display("Test Passed for A or M");
     else
       $display("Test Failed for A or M");
-    #10 ALU_OP = 3'b111;
+    ALU_OP = 3'b111;
+    #10;
     // check the output for A xor M operation
-    if(X == 8'b11110000)
+    if(X == 8'b11111111)
       $display("Test Passed for A xor M");
     else
       $display("Test Failed for A xor M");
